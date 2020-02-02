@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      function submitButton()
+      {
+        console.log("inside Button function");
+        var fname = document.getElementById("firstName").value;
+        var lname = document.getElementById("lastName").value;
+        var msg = document.getElementById("message").value;
+
+        var jsonData = "firstName:" + fname + ",lastName:" + lname + ",Message:" + msg;
+        var result = JSON.stringify(jsonData);
+        console.log(result);
+
+        var http_request;
+        http_request = new XMLHttpRequest();
+        http_request.onreadystatechange = function () { /* .. */ };
+        //http_request.open("POST", "https://py52unny70.execute-api.us-east-1.amazonaws.com/prod/testjson");
+        http_request.open("POST", "https://bsky7spph0.execute-api.us-east-1.amazonaws.com/write-prayer-json");
+        //http_request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        //http_request.setRequestHeader("Content-Type", "application/json");
+        http_request.send(result);
+
+      }
+  </script>
+</head>
+<body>
+  <h1>Submit Prayer today</h1>
+        <form id="my_form" class="content__form contact-form">
+          <input type="text" id="firstName" name="firstName" value="Steve">
+          <input type="text" id="lastName" name="lastName" value="Schofiele">
+          <input type="text" id="message" name="message" value="Jesus saves!">
+          <button class="contact-form__button" type="button" onclick="submitButton()">Send It!</button>
+        </form>
+
+          <div id="demo"></div> 
+         
+  </body>
+  </html>

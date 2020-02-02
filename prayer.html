@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <!-- basic.html -->
+  <title>Matthew 18:20 Project - Prayer Request Form</title>
+  <meta charset="utf-8" />
+  <meta name="Description" CONTENT=“Aspiring to become worlds largest private, anonymous prayer chain“>
+  <meta name=“Keywords” CONTENT=“Prayer, Jesus Christ, God, Saved by grace, child of God”>
+  <META HTTP-EQUIV="Expires" CONTENT="43200">
+  <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles_v2.css">
+    <script src="js/clearPrayerForm.js"></script>
+    <script src="js/submitPrayer.js"></script>
+</head>
+<body>
+    <center><div id="h1_title" class="h1_title"><h1>Matthew 18:20 Project</h1><center></div>
+    <center><i>Matt18:20 "For where two or three have gathered together in My name, I am there in their midst.” (NASB)</i></center>
+      
+        <form id="prayerForm" class="content__form contact-form">
+
+          <!--Capture Prayer information-->
+          <section class="content">
+          <center><h1 class="content__heading">Send a prayer request!</h1></center>
+              
+          <div class="contact-form__input-group">
+                <label class="contact-form__label" for="firstname">First Name <b>(Optional)</b></label>
+                <input tabIndex="1" class="contact-form__input contact-form__input--text" id="firstName" name="firstName" type="text"/>
+              </div>
+              <div class="contact-form__input-group">
+                <label class="contact-form__label" for="lastname">Last Name <b>(Optional)</b></label>
+                <input tabIndex="2" class="contact-form__input contact-form__input--text" id="lastName" name="lastName" type="text"/>
+              </div>
+              <div class="contact-form__input-group">
+                <label class="contact-form__label" for="message">Prayer request (10 - 1000 characters)</label>
+                <textarea tabIndex="3" style="resize: none;" placeholder="Prayer Request" class="contact-form__input contact-form__input--textarea" id="Message" name="Message" rows="3" cols="65"></textarea>
+              </div>
+              <div>
+                <hr align="center" width="25%">
+              </div>
+              <div>
+                <button tabIndex="4" class="contact-form__button" type="button" onclick="submitPrayerButton()">Send It!</button>
+              </div>
+          </section>
+
+          <!--records coordinates if approve otherwise uses Garden of Gethsemane, Jerusalem Israel
+          as default. Our goal is record location if approved, otherwise we are submitting
+          where Jesus prayed before his resurrection.  Refer to Matthew 26:36-56
+          -->
+
+          <input type="hidden" id="Longitude">
+          <input type="hidden" id="Latitude">
+          <input type="hidden" id="locationStatus">
+          
+          <!--Mssage labels to record either an error or complete.-->
+          <div>
+            <label class="errorLabel__label" id="errorMsgLabel"></label>
+            <label class="finishLabel__label" id="finishMsgLabel"></label>
+          </div>
+      </form>
+      <div id='finePrint' class='finePrint'>
+      <center><a href="/fineprint.html">Fine Print</a></center>
+      </div>
+      <!--This script block needs to below to capture info-->
+      <script src="js/setLocation_v4.js"></script>
+    </body> 
+  </html>

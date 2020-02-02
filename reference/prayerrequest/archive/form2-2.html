@@ -1,0 +1,71 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+
+        //https://www.tutorialrepublic.com/javascript-tutorial/javascript-ajax.php
+        //http://client.cors-api.appspot.com/client#?client_method=POST&client_credentials=false&client_headers=Access-Control-Allow-Origin%3A%20*%0A&server_url=https%3A%2F%2F25bz8bmgvb.execute-api.us-east-1.amazonaws.com%2Fprod%2Fprayerrequest&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote
+        //https://enable-cors.org/server_awsapigateway.html
+
+        console.log(document);
+
+        function submitButton()
+        {
+          
+          // Create the XHR object.
+          //var http_request;
+          //http_request = new XMLHttpRequest();
+          //http_request.onreadystatechange = function () { /* .. */ };
+          //http_request.open("POST", "https://py52unny70.execute-api.us-east-1.amazonaws.com/prod/testpost");
+          //http_request.setRequestHeader("Access-Control-Allow-Origin", "'*'");
+          
+          //http_request.send(document.getElementById('my_form'));
+          //Writes out all DOM object
+          //console.log(document.getElementById('my_form'));
+          //var x = document.getElementById("my_form").elements.length;
+          //console.log("number of elements" + x);
+          // console.dir(document);
+          // console.dir(document.forms);
+         
+        
+
+          var y = document.elements;
+          console.log(y);
+          //var list = document.querySelectorAll('input[type=text]');
+          //var el = HTMLFormControlsCollection(list);
+          
+          // for (var s = 0;s < el.length;s++)
+          // {
+          //   console.log(el[s].nodeName)
+          // }
+
+          // for (var i = 0; i < list.length; i++) 
+          //   {
+          //     var theName = list[i].nodeName.value;
+          //     console.log(theName + ":" + list[i].value)
+          //   }          
+
+          //http_request.send(document.getElementById('my_form'));
+        }
+
+    </script>
+    
+</head>
+
+<body>
+        <form id="my_form" class="content__form contact-form">
+          <input type="text" id="firstName" name="firstName" value="Steve">
+          <input type="text" id="lastName" name="lastName" value="Schofiele">
+          <input type="text" id="message" name="message" value="Jesus saves!">
+          <button class="contact-form__button" type="button" onclick="submitButton()">Send It!</button>
+        </form>
+
+          <div id="demo">
+            <p></p>
+        </div> 
+         
+        </section>
+        </body>
+        </html>

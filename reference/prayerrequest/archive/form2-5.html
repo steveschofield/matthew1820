@@ -1,0 +1,60 @@
+<html>
+<head>
+    <script src="clearFields.js"></script>
+    
+    <script>
+        function submitButton()
+        { 
+        //Retrieve data from form
+        var _fname = document.getElementById("firstName").value;
+        var _lname = document.getElementById("lastName").value;
+        var _msg = document.getElementById("message").value;
+        var _longitude = document.getElementById("Longitude").value;
+        var _latitude = document.getElementById("Latitude").value;
+
+        // Example
+        // https://www.w3schools.com/js/js_json_stringify.asp
+        // var obj = { name: "John", age: 30, city: "New York" };
+        // var myJSON = JSON.stringify(obj);
+
+        //stringify json
+        var jsonData = {firstName: _fname, lastName: _lname, Message: _msg, Longitude: _longitude, Latitude: _latitude}
+        var prayerJSON = JSON.stringify(jsonData);
+        console.log("Data serialized:" + prayerJSON);
+
+        var http_request;
+        http_request = new XMLHttpRequest();
+        http_request.onreadystatechange = function () { /* .. */ };
+        http_request.open("POST", "https://bsky7spph0.execute-api.us-east-1.amazonaws.com/write-prayer-json");
+        http_request.send(prayerJSON);
+
+        var _finishMsgLabel = document.getElementById("finishMsgLabel");
+        _finishMsgLabel.innerHTML = "Your prayer was submitted!"
+
+        //Clear fields
+        ClearFields();
+      }
+  </script>
+</head>
+<body onload="getLocation()"
+>
+  <h1>Submit Prayer today</h1>
+        <form id="prayerForm" class="content__form contact-form">
+         
+          <!--Capture Prayer information-->
+          <input type="text" id="firstName" name="firstName" value="Steve">
+          <input type="text" id="lastName" name="lastName" value="Schofield">
+          <textarea id="message" name="message" rows="6" cols="65">Jesus Saves!</textarea>
+         
+          <!--Capture latitude if client agrees, otherwise default to Jerusalem-->
+          <input type="hidden" id="Longitude">
+          <input type="hidden" id="Latitude">
+          <button class="contact-form__button" type="button" onclick="submitButton()">Send It!</button>
+        
+          <p id="errorMsgLabel"></p> 
+          <p id="finishMsgLabel"></p>
+          
+      </form>
+      <script src="location.js"></script>
+    </body> 
+  </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <!-- basic.html -->
+  <title>Matthew 18:20 Project - Prayer Request Form</title>
+  <meta charset="utf-8" />
+  <meta name="Description" CONTENT=“Aspiring to become worlds largest private, anonymous prayer chain“>
+  <meta name=“Keywords” CONTENT=“Prayer, Jesus Christ, God, Saved by grace, child of God”>
+  <META HTTP-EQUIV="Expires" CONTENT="43200">
+  <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles_v2.css">
+</head>
+<body>
+        <center><div id="h1_title" class="h1_title"><h1>Matthew 18:20 Project</h1><center></div>
+        <center><i>Matt18:20 "For where two or three have gathered together in My name, I am there in their midst.” (NASB)</i></center>
+        <form id="prayerForm" class="content__form contact-form">
+
+          <!--Capture Prayer information-->
+          <form id="contact-form" method="post">
+            <h4>Name:</h4>
+            <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
+            <h4>Phone:</h4>
+            <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
+            <h4>Email:</h4>
+            <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
+            <h4>How can we help you?</h4>
+            <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
+            <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+            <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+     
+
+          <!--records coordinates if approve otherwise uses Garden of Gethsemane, Jerusalem Israel
+          as default. Our goal is record location if approved, otherwise we are submitting
+          where Jesus prayed before his resurrection.
+          -->
+
+          <input type="hidden" id="Longitude">
+          <input type="hidden" id="Latitude">
+          <input type="hidden" id="locationStatus">
+          
+          <!--Mssage labels to record either an error or complete.-->
+          <div>
+            <label class="errorLabel__label" id="errorMsgLabel"></label>
+          </div>
+
+          <label class="finishLabel__label" id="finishMsgLabel"></label>
+          
+          <div class="hline"></div>
+
+          <div>
+            <label class="fyiLabel__label" id="fyiMsgLabel">All prayers are encrypted and not shared except between you and God. The <a href="https://www.biblegateway.com/passage/?search=matthew+18%3A20&version=NASB" target="_blank">Matthew 18:20</a> project was God inspired to follow <a href="https://www.biblegateway.com/passage/?search=matthew+6%3A6&version=nasb" target="_blank">" Matthew 6:6 </a>.  The Matthew 18:20 tracks "with permission" location and "prayer word count".  Prayer warriors can subscribe to receive notifications (email or sms) with number of words and total number of prayers from each day. If you have questions, please  <a href="mailto:steveschofield@gmail.com?subject=Matthew 18:20 project feedback form&body=Please type message..">email</a></label>
+          </div>
+      </form>
+
+      <!--This script block needs to below to capture info-->
+      <script src="js/setLocation_v2.js"></script>
+    </body> 
+  </html>

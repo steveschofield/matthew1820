@@ -1,0 +1,60 @@
+initial commands creating master branch
+
+1 git-scm
+   2 git
+   3 git push
+   4 git remote add matthew1820 https://github.com/steveschofield/matthew1820.git
+   5 git push matthew1820
+   6 git push --set-upstream matthew1820 master
+
+
+   after creating master and wanting to create develop
+     Id CommandLine
+
+  46 vi ss
+  48 git branch -c master develop
+  49 git branch
+  51 git checkout develop
+  55 git push matthew1820 HEAD:develop
+
+resources
+  https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/setup-credentials.html
+  
+  https://www.youtube.com/watch?v=ld9FmI5-h8U
+
+  https://www.akadia.com/services/ssh_test_certificate.html
+
+  Topics to write about
+  Setting up Live Server
+  Setup local debugging HTML via Chrome
+
+
+  https://www.thegeekdiary.com/how-to-install-docker-on-mac/
+
+  install instrucitons
+
+  https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html
+
+  https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
+
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.htmlsam
+
+  .Promise needs to be added!
+  https://github.com/aws/aws-sdk-js/issues/1436
+
+  syntax for testing JSON
+  https://stackoverflow.com/questions/52914537/getting-syntaxerror-unexpected-token-u-in-json-at-position-0-when-running-lambd
+
+  https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
+
+  https://www.jobsity.com/blog/apache-ssl-mac-osx
+
+  contacts
+  https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/
+
+SNS
+  https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html
+  https://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/sns-send-sms.html
+
+Apache configuration
+https://stackoverflow.com/questions/18392741/apache2-ah01630-client-denied-by-server-configuration

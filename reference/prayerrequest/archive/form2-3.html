@@ -1,0 +1,43 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+
+        //https://www.tutorialrepublic.com/javascript-tutorial/javascript-ajax.php
+        //http://client.cors-api.appspot.com/client#?client_method=POST&client_credentials=false&client_headers=Access-Control-Allow-Origin%3A%20*%0A&server_url=https%3A%2F%2F25bz8bmgvb.execute-api.us-east-1.amazonaws.com%2Fprod%2Fprayerrequest&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote
+        //https://enable-cors.org/server_awsapigateway.html
+
+        
+        function submitButton()
+        {
+          document.getElementById('my_form');
+          data = new FormData(my_form)
+
+          let request = new XMLHttpRequest();
+          request.open("POST", 'https://py52unny70.execute-api.us-east-1.amazonaws.com/prod/testpost', true);
+          request.send(data)
+        }
+
+    </script>
+    
+</head>
+
+<body>
+        
+        <form id="my_form" class="content__form contact-form">
+          <input type="text" name="firstName" value="Steve">
+          <input type="text" name="lastName" value="Schofiele">
+          <input type="text" name="message" value="Jesus saves!">
+
+            <button class="contact-form__button" type="button" onclick="submitButton()">Send It!</button>
+          </form>
+
+          <div id="result">
+            <p>Content of the result DIV box will be replaced by the server response</p>
+        </div> 
+         
+        </section>
+        </body>
+        </html>

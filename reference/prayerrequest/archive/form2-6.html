@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      function submitButton()
+      {
+        //Retrieve data from form
+        var fname = document.getElementById("firstName").value;
+        var lname = document.getElementById("lastName").value;
+        var msg = document.getElementById("Message").value;
+
+        // Example
+        // https://www.w3schools.com/js/js_json_stringify.asp
+        // var obj = { name: "John", age: 30, city: "New York" };
+        // var myJSON = JSON.stringify(obj);
+
+        //stringify json
+        var jsonData = {firstName: fname, lastName: lname, Message: msg}
+        var prayerJSON = JSON.stringify(jsonData);
+        console.log("Data serialized:" + prayerJSON);
+
+        var http_request;
+        http_request = new XMLHttpRequest();
+        http_request.onreadystatechange = function () { /* .. */ };
+        
+        http_request.open("POST", "https://bsky7spph0.execute-api.us-east-1.amazonaws.com/write-prayer-json");
+        http_request.send(prayerJSON);
+      }
+  </script>
+</head>
+<body>
+  <h1>Submit Prayer today</h1>
+        <form id="my_form" class="content__form contact-form">
+          <section class="content">
+            <h1 class="content__heading">Send a prayer request!</h1>
+              <div class="contact-form__input-group">
+                <label class="contact-form__label" for="firstname">First Name</label>
+                <input class="contact-form__input contact-form__input--text" id="firstName" name="firstName" type="text"/>
+              </div>
+              <div class="contact-form__input-group">
+                <label class="contact-form__label" for="lastname">Last Name</label>
+                <input class="contact-form__input contact-form__input--text" id="lastName" name="lastName" type="text"/>
+              </div>
+              <div class="contact-form__input-group">
+                <label class="contact-form__label" for="message">Enter a Message</label>
+                <textarea class="contact-form__input contact-form__input--textarea" id="Message" name="Message" rows="6" cols="65"></textarea>
+              </div>
+              <button class="contact-form__button" type="button" onclick="submitButton()">Send It!</button>
+            </form>
+          </section>
+  </body>
+  </html>
