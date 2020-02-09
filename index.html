@@ -6,20 +6,30 @@
   <meta charset="utf-8" />
   <meta name="Description" CONTENT=“Aspiring to become worlds largest private, anonymous prayer chain“>
   <meta name=“Keywords” CONTENT=“Prayer, Jesus Christ, God, Saved by grace, child of God”>
-  <META HTTP-EQUIV="Expires" CONTENT="43200">
+  <meta http-equiv="Cache-control" content="public" max-age="86400">
   <link rel="icon" 
       type="image/png" 
       href="images/favicon.ico">
-    <link rel="stylesheet" href="css/styles_v2.css">
+  <link rel="stylesheet" href="css/styles_v2.css">
+  <!--required for maps-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+ integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+ crossorigin=""></script>
+    <style>
+      body { margin:0; padding:0; }
+      #map {height: 1024px; width: 75%;}
+    </style>
 </head>
 <body>
     <center>
-      <div id="h1_title" class="h1_title"><h1>Matthew 18:20 Project</h1>
-
-      </div>
+      <div id="h1_title" class="h1_title"><h1>Matthew 18:20 Project</h1></div>
     </center>
     <section class="contact-section-border">
-
         <center>
         <table width="50%" height="100%" border="1">
           <tr>
@@ -27,17 +37,26 @@
             <td align="center" width="50%"><b>Join Prayer network?</b><br/><a href="/join.html"><img src="images/matt1820.png" height="300" width="300" border="0"></a></td>
           </tr>
           <tr>
-            <td align="center" width="50%">Daily Stats</td>
-            <td align="center" width="50%">Weekly Stats</td>
+            <td align="center" width="50%">Daily Stats:<h2>22 prayers</h2></td>
+            <td align="center" width="50%">Weekly Stats:<h2>22 prayers</h2></td>
           </tr>
         </table>
       </center>
       <br/>
   </section>
   <br />
+  <center>
+    <div id="h1_title" class="h1_title"><h1>Prayers by location & Prayer Warriors (if permission is granted)</h1></div>
+  </center>
+  <center>
+    <div id="map"></div>
+  </center>
+
+  <script src="js/map.js"></script>
+
+  <br />
   <div id='finePrint' class='finePrint'>
     <center><a href="/fineprint.html">Fine Print - What is this project about?</a></center>
   </div>
-
   </body>
   </html>

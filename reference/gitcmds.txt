@@ -58,3 +58,16 @@ SNS
 
 Apache configuration
 https://stackoverflow.com/questions/18392741/apache2-ah01630-client-denied-by-server-configuration
+
+https://leafletjs.com/examples/quick-start/
+
+
+<script type="text/javascript" language="javascript">  
+    var versionUpdate = (new Date()).getTime();  
+    var script = document.createElement("script");  
+    script.type = "text/javascript";  
+    script.src = "/myProduct/scripts/myUpdates.js?v=" + versionUpdate;  
+    document.body.appendChild(script);  
+</script> 
+
+https://www.c-sharpcorner.com/article/how-to-force-the-browser-to-reload-cached-js-css-files-to-reflect-latest-chan/

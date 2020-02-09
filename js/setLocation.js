@@ -19,7 +19,7 @@ function error(err) {
   //console.warn(`ERROR(${err.code}): ${err.message}`);
   var errMsg = "'" + err.message + "'";
   //console.log(errMsg);
-  setME(31.7805979,35.237977,errMsg);
+  setME(35.237977,31.7805979,errMsg);
 }
 
 var options = {
@@ -29,14 +29,14 @@ var options = {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-function setME(lo, la, ls) {
+function setME(la, lo, ls) {
   //console.log("values set:" + lo,la,ls);
-
-  var s = document.getElementById('Longitude');
-  s.setAttribute("value", lo);
 
   var t = document.getElementById('Latitude');
   t.setAttribute("value", la);
+  
+  var s = document.getElementById('Longitude');
+  s.setAttribute("value", lo);
 
   var u = document.getElementById('locationStatus');
   u.setAttribute("value",ls);

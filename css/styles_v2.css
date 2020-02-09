@@ -206,3 +206,5 @@
         border-top: 1px solid #cdcfcf;
         border-bottom: 1px solid #cdcfcf;
       }
+
+      #mapid { height: 1000px; width: 1000px; align-items: center; }
