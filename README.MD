@@ -1,0 +1,1 @@
+These are the source control for full-stack application.  Certificates, private keys have been included as they are self-signed.  These were not used in a production environment.  Live Server was leveraged.   
