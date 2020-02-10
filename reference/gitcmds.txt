@@ -71,3 +71,51 @@ https://leafletjs.com/examples/quick-start/
 </script> 
 
 https://www.c-sharpcorner.com/article/how-to-force-the-browser-to-reload-cached-js-css-files-to-reflect-latest-chan/
+
+No work
+ var someFeatures = [{
+        "type": "Feature",
+        "properties": {
+            "name": "Garden of Gethsemane, Jerusalem Israel",
+            "show_on_map": true
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [35.2137,31.7683]
+        },
+        "type": "Feature",
+        "properties": {
+            "name": "Garden of Gethsemane, Jerusalem Israel",
+            "show_on_map": true
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-85.2908369,43.1825601]
+        }
+    }];
+
+
+Work
+    var someFeatures = [{
+        "type": "Feature",
+        "properties": {
+            "name": "Garden of Gethsemane, Jerusalem Israel",
+            "show_on_map": true
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [35.2137,31.7683]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Greenville, MI",
+            "show_on_map": true
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-85.2908369,43.1825601]
+        }
+    }];
+    
+    https://mourner.github.io/Leaflet/examples/geojson.html

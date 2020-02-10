@@ -4,7 +4,7 @@
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      var someFeatures = [{
+    var someFeatures = [{
         "type": "Feature",
         "properties": {
             "name": "Garden of Gethsemane, Jerusalem Israel",
@@ -14,6 +14,16 @@
             "type": "Point",
             "coordinates": [35.2137,31.7683]
         }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "name": "Greenville, MI",
+            "show_on_map": true
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-85.2908369,43.1825601]
+        }
     }];
     
     L.geoJSON(someFeatures, {
@@ -22,6 +32,6 @@
         }
     }).addTo(map);
 
-    L.circle([98.5, -84.54], {color: "red",radius: 200}).addTo(map);
-    L.circle([-88.5, 74.54], {radius: 200}).addTo(map);
+    L.circle([41.799089, 12.7067611], {color: "red",radius: 200}).addTo(map);
+    L.circle([55.580748,36.8251174], {radius: 200}).addTo(map);
     

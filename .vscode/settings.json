@@ -1,8 +1,8 @@
 {
     "liveServer.settings.https": {
     "enable": true, //set it true to enable the feature.
-    "cert": "/Users/<change>/Sites/server.crt", //full path of the certificate
-    "key": "/Users/<change>/Sites/server.key", //full path of the private key
+    "cert": "/Users/aiuex79/Sites/server.crt", //full path of the certificate
+    "key": "/Users/aiuex79/Sites/server.key", //full path of the private key
     "passphrase": "12345"
     }
     }
